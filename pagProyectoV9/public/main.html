@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheSupremeOniiChat</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./../src/js.js"></script>
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+        
+          border-radius: 10px;
+          background: transparent;
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: grey; 
+          border-radius: 10px;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #3a12ff;
+    background-image: linear-gradient(#faaf00, #ff2e2e, #3a12ff);
+    background-attachment: fixed;
+        }
+        </style>
+</head>
+<body>
+
+
+<!-- <div class="demo">Hello</div> -->
+
+    <div class="postBackground">
+        <!-- contennedor da pustu-backugrounde -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 cllussuaries" id="list_container">
+                        <div id="server_containter"></div>
+                    </div>
+                    <!-- ussuaries -->
+                    <div class="col-8 cllleftussuaries" id="chat_container">
+                        <div id="message_container_container">
+                            <div class="message__spacer"></div>
+                            <div class="message__actions"></div>
+                            <div class="cllleftussuariesbutnowisthetext" id="message_container"> </div> 
+                            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 cllbutoncontainer" id="cll">
+                    <!--   <button class="float-left btn rounded-circle boton1"  onclick="bubu()">svs</button> -->  
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-card-list botonserver" viewBox="0 0 16 16" onclick="bubu()">
+                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                          </svg>
+
+                   
+
+
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="currentColor" class="bi bi-box-arrow-left botonlogout" viewBox="0 0 16 16" onclick="logoutbubu()">
+                                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                                  </svg>
+                        
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-basket3-fill botonconfig" viewBox="0 0 16 16" onclick="location.href = 'config.html'">
+                                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z"/>
+                                </svg>
+
+
+                        <!--   <button class="btn rounded-circle boton4" onclick="configbubu()">cfg</button> --> 
+                       <!-- <button class="float-right btn rounded-circle boton2" onclick="location.href = 'index.html';">land</button> --> 
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="currentColor" class="bi bi-house botonlanding" viewBox="0 0 16 16" onclick="location.href = 'index.html';">
+                                    <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                                </svg>
+
+                    </div>
+                    <div  class="col-8 clltextbar">
+                        <input id="chat_input" type="text" placeholder="Send message to: ">
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                
+                <!-- le chat  -->
+            </div>
+        </div>
+        <div class="butonzz">
+            <!-- le buton da baj do ussuaries -->
+        </div>
+        <div class="chatutoscribi">
+            <!-- le barre do lado da buton da baj do ussuaries -->
+        </div>
+    </div>
+    <pre>
+        <code class="prettyprint">
+            <script>
+            var jsonObj = {
+                "height" : 6.2,
+                "width" : 7.3,
+                "length" : 9.1,
+                "color" : {
+                    "r" : 255,
+                    "g" : 200,
+                    "b" : 10
+                }
+            }
+            el.input.val(JSON.stringify(demo,null,4));
+            var node = new PrettyJSON.view.Node({ 
+                el:el.result, 
+                data:o
+            });
+            </script>
+        </code>
+    </pre>
+    <script type="text/javascript" src="pretty-json-min.js" ></script>
+    <script type="text/javascript" src="libs/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="libs/underscore-min.js" ></script>
+    <script type="text/javascript" src="libs/backbone-min.js" ></script>
+    <script src="js.js"></script>
+</body>
+</html>
